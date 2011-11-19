@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:orientation="vertical" android:fadingEdgeLength="5dip">
+	<ScrollView android:layout_width="wrap_content"
+		android:fillViewport="true" android:layout_height="wrap_content"
+		android:layout_weight="1">
+		<RelativeLayout android:layout_width="match_parent"
+			android:layout_height="match_parent">
+			<ImageView android:id="@+id/imgIcon" android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:src="@drawable/icon_default"
+				android:layout_alignParentLeft="true" android:layout_alignParentTop="true" />
+			<TextView android:textSize="20dp" android:layout_height="wrap_content"
+				android:textStyle="bold" android:id="@+id/txtName"
+				android:text="This_is_a_really_really_really_long_file_name.pdf"
+				android:layout_toRightOf="@id/imgIcon" android:layout_width="match_parent"
+				android:singleLine="true" android:ellipsize="middle"
+				android:scrollHorizontally="true" />
+			<TextView android:layout_height="wrap_content"
+				android:layout_width="wrap_content" android:layout_toRightOf="@id/imgIcon"
+				android:layout_below="@id/txtName" android:id="@+id/txtStatus"
+				android:text="Downloaded 33MB in 33s @ 1MB/s" />
+			<TextView android:id="@+id/lblURL" android:layout_height="wrap_content"
+				android:textStyle="bold" android:textSize="20dp" android:text="@string/editor_url"
+				android:layout_width="wrap_content" android:layout_below="@+id/txtStatus"
+				android:layout_marginTop="5dip" />
+			<TextView android:id="@+id/txtURL" android:text="http://www.google.com"
+				android:layout_height="wrap_content" android:layout_width="match_parent"
+				android:layout_marginLeft="5dip" android:layout_below="@id/lblURL" />
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:textStyle="bold"
+				android:textSize="20dp" android:id="@+id/lblLocation"
+				android:layout_marginRight="5dip" android:text="@string/details_save_to"
+				android:layout_below="@id/txtURL" />
+			<TextView android:layout_height="wrap_content" android:text="Location here"
+				android:ellipsize="middle" android:layout_width="match_parent"
+				android:id="@+id/txtLocation" android:layout_marginLeft="5dip"
+				android:layout_below="@id/lblLocation" />
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:textStyle="bold"
+				android:textSize="20dp" android:id="@+id/lblThreads" android:text="@string/editor_threads"
+				android:layout_below="@id/txtLocation" />
+			<LinearLayout android:layout_height="wrap_content"
+				android:layout_below="@+id/lblThreads" android:layout_alignLeft="@+id/lblThreads"
+				android:layout_width="match_parent" android:id="@+id/grpThreads"
+				android:orientation="vertical"></LinearLayout>
+			<TextView android:layout_height="wrap_content" android:text="16"
+				android:textSize="20dp" android:textStyle="bold" android:id="@+id/txtThreads"
+				android:layout_width="wrap_content" android:layout_marginLeft="5dip"
+				android:layout_below="@id/txtLocation"
+				android:layout_alignParentRight="true" />
+		</RelativeLayout>
+	</ScrollView>
+	<LinearLayout android:id="@+id/grpButtonsBar"
+		android:layout_height="wrap_content" android:background="@drawable/toolbar_background"
+		android:layout_gravity="center" android:fadingEdge="vertical|horizontal"
+		android:layout_width="wrap_content" android:layout_marginBottom="5dip">
+		<Button android:onClick="onLaunchFileClicked"
+			android:layout_height="wrap_content" android:layout_gravity="center"
+			android:text="@string/empty" android:textSize="0dip"
+			android:layout_margin="5dip" android:id="@+id/launch"
+			android:layout_width="wrap_content" android:background="@drawable/launch_file"></Button>
+		<Button android:onClick="onStopDownloadClicked"
+			android:layout_height="wrap_content" android:focusable="false"
+			android:layout_gravity="center" android:text="@string/empty"
+			android:textSize="0dip" android:layout_margin="5dip" android:id="@+id/stop"
+			android:layout_width="wrap_content" android:background="@drawable/stop"></Button>
+		<ToggleButton android:textOn="@string/empty"
+			android:background="@drawable/playbutton" android:layout_height="wrap_content"
+			android:onClick="onPauseDownloadClicked" android:textSize="0dip"
+			android:id="@+id/pause" android:layout_gravity="center"
+			android:layout_margin="5dip" android:textOff="@string/empty"
+			android:layout_width="wrap_content" android:text="@string/empty"></ToggleButton>
+		<Button android:background="@drawable/restart"
+			android:textSize="0dip" android:layout_gravity="center"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:text="@string/empty" android:onClick="onRestartClicked"
+			android:layout_margin="5dip" android:id="@+id/restart"/>
+	</LinearLayout>
+</LinearLayout>

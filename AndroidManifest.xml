@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	android:versionCode="3" android:versionName="1.0.2"
+	package="in.shreybanga.DownloadAccelerator">
+	<uses-permission android:name="android.permission.INTERNET"></uses-permission>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<uses-sdk android:maxSdkVersion="12" android:targetSdkVersion="10" android:minSdkVersion="1"></uses-sdk>
+	<supports-screens
+	        android:largeScreens="true"
+	        android:normalScreens="true"
+	        android:anyDensity="true" 
+	    android:smallScreens="true" android:resizeable="true"/>
+	<application android:icon="@drawable/icon" android:label="@string/app_name">
+		<activity android:label="@string/app_name"
+			android:configChanges="orientation" android:name="DownloadsList">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW"></action>
+				<category android:name="android.intent.category.BROWSABLE"></category>
+				<category android:name="android.intent.category.DEFAULT"></category>
+				<data android:scheme="http" android:mimeType="application/*"></data>
+				<data android:scheme="http" android:mimeType="video/*"></data>
+				<data android:scheme="http" android:mimeType="audio/*"></data>
+				<data android:scheme="http" android:mimeType="text/*"></data>
+				<data android:scheme="http" android:mimeType="image/*"></data>
+			</intent-filter>
+		</activity>
+		<activity android:name="DownloadEditor" android:label="@string/editor_new_download"></activity>
+		<activity android:name="DownloadDetails" android:label="@string/download_details"></activity>
+		<activity android:name="in.shreybanga.DownloadAccelerator.PreferencesEditor" android:label="@string/label_settings"></activity>
+	</application>
+</manifest>

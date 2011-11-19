@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="Defaults">
+		<EditTextPreference android:key="prefSaveTo"
+			android:title="Default location" android:summary="Choose default folder for downloads"
+			android:defaultValue="@string/default_save_to" android:persistent="true"></EditTextPreference>
+		<EditTextPreference android:key="prefThreads"
+			android:title="Default connections" android:summary="Default number of threads per download"
+			android:defaultValue="@string/default_threads" android:persistent="true" android:numeric="integer"></EditTextPreference>
+
+	</PreferenceCategory>
+	<PreferenceCategory android:title="URL Capturing">
+		<CheckBoxPreference android:key="prefAutoStart"
+			android:title="Auto start downloads"
+			android:summary="Start downloads immediately when a link is clicked on a web page"
+			android:defaultValue="false" android:persistent="true"></CheckBoxPreference>
+	</PreferenceCategory>
+</PreferenceScreen>

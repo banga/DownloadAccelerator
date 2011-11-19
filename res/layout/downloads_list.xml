@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent">
+
+	<ListView android:id="@+id/android:list" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" />
+	<RelativeLayout android:id="@+id/android:empty"
+		android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<LinearLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:orientation="horizontal"
+			android:layout_centerInParent="true">
+			<Button android:id="@+id/main_btnNew" android:background="@drawable/header_new"
+				android:layout_margin="5dip" android:text="@string/empty"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_centerInParent="true" android:gravity="center"
+				android:onClick="onNewClicked"></Button>
+			<Button android:id="@+id/main_btnSettings" android:background="@drawable/header_settings"
+				android:layout_margin="5dip" android:text="@string/empty"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:gravity="center" android:onClick="onSettingsClicked"></Button>
+		</LinearLayout>
+	</RelativeLayout>
+</LinearLayout>

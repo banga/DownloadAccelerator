@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="wrap_content"
+	android:orientation="horizontal" android:gravity="center_horizontal">
+	<Button android:id="@+id/btnNew" android:background="@drawable/header_new"
+		android:text="@string/empty" android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:layout_margin="5dip"
+		android:onClick="onNewClicked"></Button>
+	<Button android:id="@+id/btnClear" android:background="@drawable/header_clear"
+		android:layout_height="wrap_content" android:layout_width="wrap_content"
+		android:onClick="onClearClicked" android:text="@string/empty"
+		android:layout_margin="5dip">
+	</Button>
+	<Button android:id="@+id/btnSettings" android:layout_width="wrap_content"
+		android:layout_margin="5dip" android:onClick="onSettingsClicked"
+		android:layout_height="wrap_content" android:background="@drawable/header_settings"
+		android:text="@string/empty"></Button>
+</LinearLayout>

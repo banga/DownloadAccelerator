@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:gravity="right">
+	<ImageView 
+		android:src="@drawable/icon_default" 
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:id="@+id/file_icon" />
+	<TextView android:layout_width="fill_parent"
+		android:text="I_am_a_really_really_long_file_name.jpg" android:id="@+id/file_name"
+		android:layout_height="wrap_content" android:layout_toRightOf="@id/file_icon"
+		android:layout_alignParentTop="true" android:ellipsize="middle"
+		android:layout_toLeftOf="@+id/pause" android:textStyle="bold"></TextView>
+	<TextView android:id="@+id/status" android:layout_height="wrap_content"
+		android:text="300KB/989KB in 300s @ 123.2KB/s"
+		android:layout_alignParentRight="true" android:layout_width="wrap_content"
+		android:layout_marginRight="5dip" android:layout_marginTop="2dip"
+		android:layout_below="@+id/progress" android:layout_toRightOf="@+id/file_icon"></TextView>
+	<ProgressBar android:layout_weight="1" android:id="@+id/progress"
+		android:layout_width="wrap_content" android:layout_gravity="center_vertical"
+		android:layout_toRightOf="@id/file_icon"
+		android:layout_alignParentRight="true" android:focusable="false"
+		android:indeterminate="false" android:max="100"
+		style="@android:style/Widget.ProgressBar.Horizontal"
+		android:progressDrawable="@drawable/progressbar_downloads"
+		android:progress="90" android:layout_below="@+id/file_name" android:layout_marginRight="5dip"
+		android:layout_marginTop="2dip" android:layout_height="8dip"></ProgressBar>
+</RelativeLayout>

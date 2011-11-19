@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, DownloadsList!</string>
+    <string name="app_name">Download Accelerator</string>
+    <string name="menu_insert">New</string>
+    <string name="menu_clear">Clear</string>
+    <string name="editor_url">URL</string>
+    <string name="empty"></string>
+    <string name="editor_save_as">Save as</string>
+    <string name="editor_threads">Threads</string>
+    <string name="editor_start">Start</string>
+    <string name="editor_new_download">New Download</string>
+    <string name="header_new">New...</string>
+    <string name="header_clear">Remove All</string>
+    <string name="download_details">Download Details</string>
+    <string name="preferences_auto_start">Start downloads automatically</string>
+    <string name="preferences_default_save_to">Save to</string>
+    <string name="preferences_default_threads">Threads</string>
+    <string name="default_save_to">/mnt/sdcard/downloads/</string>
+    <string name="default_threads">8</string>
+    <string name="label_settings">Settings</string>
+    <string name="details_save_to">Save to</string>
+    <string name="menu_settings">Settings</string>
+</resources>
